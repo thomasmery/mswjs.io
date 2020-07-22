@@ -20,7 +20,6 @@ Unlike a NodeJS `Request`, the request object in Mock Service Worker is a _parti
 | Property         | Type                                                                                                |
 | ---------------- | --------------------------------------------------------------------------------------------------- |
 | `url`            | `string`                                                                                            |
-| `query`          | [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)               |
 | `body`           | `string`, `Record<string, any>`                                                                     |
 | `method`         | [`Request.method`](https://developer.mozilla.org/en-US/docs/Web/API/Request/method)                 |
 | `headers`        | [`Request.headers`](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers)               |
@@ -34,6 +33,8 @@ Unlike a NodeJS `Request`, the request object in Mock Service Worker is a _parti
 | `referrerPolicy` | [`Request.referrerPolicy`](https://developer.mozilla.org/en-US/docs/Web/API/Request/referrerPolicy) |
 | `integrity`      | [`Request.integrity`](https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity)           |
 | `destination`    | [`Request.destination`](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination)       |
+
+_deprecation warning_: The _query_ property has been deprecated in favor of directly using `req.url.searchParams` which achieves the same thing and is closer to the [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)  syntax.
 
 ### GraphQL
 
